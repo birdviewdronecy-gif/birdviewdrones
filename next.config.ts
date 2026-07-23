@@ -1,13 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Production-ready defaults for Vercel
+  // Static HTML export — deploys cleanly on Cloudflare Pages
+  output: "export",
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
-    // Local assets under /public — no remote patterns required today
+    // Required for static export (no image optimization server)
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
   },
+  // Trailing slashes help static hosts map directories → index.html
+  trailingSlash: true,
 };
 
 export default nextConfig;
