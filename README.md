@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bird View Drones — birdviewdrones.cy
 
-## Getting Started
+Award-oriented marketing site for immersive **Antigravity A1** drone experiences across Cyprus.
 
-First, run the development server:
+**Tagline:** Experience Cyprus From Above  
+**Promise:** The closest thing to flying — no technical knowledge required.
+
+Design language is inspired by editorial / Awwwards craft (e.g. [hirotos.com](https://www.hirotos.com/)): strict type hierarchy, cream/black palette with copper accent, full-viewport storytelling, preloader, custom cursor, horizontal spot marquee, and tech narrative for the A1.
+
+## Tech stack
+
+| Layer | Choice |
+|--------|--------|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 + custom design tokens |
+| Fonts | Instrument Serif + DM Sans (Google Fonts) |
+| Motion | CSS reveals + marquee; GSAP available |
+| Content | Typed modules in `src/content/` |
+| Forms | Mailto inquiry (phase 1) |
+
+## Run locally
 
 ```bash
+export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh"
+cd birdviewdrones
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Edit content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| What | File |
+|------|------|
+| Brand & nav | `src/content/site.ts` |
+| Experiences | `src/content/experiences.ts` |
+| Spots + images | `src/content/spots.ts` |
+| A1 tech copy | `src/content/tech.ts` |
+| Images | `public/images/` |
 
-## Learn More
+## Home narrative (scroll)
 
-To learn more about Next.js, take a look at the following resources:
+1. Immersive hero — sensation of flight  
+2. You don’t pilot. You fly.  
+3. Landscape statement  
+4. Horizontal Cyprus spots  
+5. Technology — Antigravity A1  
+6. Occasions list  
+7. Retail / Pro split  
+8. Golden sunset CTA  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to Git, import on Vercel (or similar), point `birdviewdrones.cy` DNS.

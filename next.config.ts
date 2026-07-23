@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Production-ready defaults for Vercel
+  poweredByHeader: false,
+  reactStrictMode: true,
+  images: {
+    // Local assets under /public — no remote patterns required today
+    formats: ["image/avif", "image/webp"],
+  },
 };
 
 export default nextConfig;
